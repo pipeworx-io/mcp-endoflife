@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-endoflife",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "endoflife.date MCP.",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-8583d274c9cb3341c7f669d78cb9beb36d8888ef7734dc7c8cf09505acf0be1a",
-    "sourceCommit": "5749f83c0ea115fab4c0c0ef04b66b05f2507d67"
+    "sourceHash": "v1-49bf701cd38b7a939f353b1308f1c55366cc12626a3f2272006c3dc6d84dc55b",
+    "sourceCommit": "722087a9bda73f85942e8f6bbfd598544cb0d490"
   }
 }
