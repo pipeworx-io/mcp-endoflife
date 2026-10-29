@@ -1,0 +1,56 @@
+[
+  {
+    "name": "list_products",
+    "description": "List the ~460 software products endoflife.date tracks (languages, frameworks, OSes, databases, devices) as slugs. These slugs feed get_product and get_cycle. Keyless. Use the `search` filter to find one (\"postgres\", \"ubuntu\", \"node\").",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "search": {
+          "type": "string",
+          "description": "Case-insensitive substring filter over product slugs, e.g. \"post\" matches \"postgresql\". Optional."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max products to return (default 50, max 200)."
+        }
+      }
+    }
+  },
+  {
+    "name": "get_product",
+    "description": "Get a product's full release/support timeline — every cycle with release date, EOL date, active-support end, latest patch, and LTS status. Use for \"is Node 18 still supported?\" / \"what's the latest Ubuntu LTS?\". `product` is a slug from list_products, e.g. \"python\", \"nodejs\", \"ubuntu\", \"postgresql\", \"kubernetes\". Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "description": "Product slug from list_products, e.g. \"python\", \"nodejs\", \"ubuntu\", \"postgresql\", \"kubernetes\"."
+        }
+      },
+      "required": [
+        "product"
+      ]
+    }
+  },
+  {
+    "name": "get_cycle",
+    "description": "Get a single release cycle's support details for a product — release date, EOL, active-support end, latest patch, LTS, and any extended-support window. Use for a precise version question like \"when does Python 3.9 lose support?\". `product` is a slug from list_products; `cycle` is a version like \"3.12\", \"20.04\", \"18\". Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "description": "Product slug from list_products, e.g. \"python\", \"ubuntu\", \"nodejs\"."
+        },
+        "cycle": {
+          "type": "string",
+          "description": "Release cycle / version, e.g. \"3.12\", \"20.04\", \"18\"."
+        }
+      },
+      "required": [
+        "product",
+        "cycle"
+      ]
+    }
+  }
+]
