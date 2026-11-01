@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-endoflife",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "endoflife.date MCP.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "endoflife",
     "gatewaySlug": "endoflife",
-    "sourceHash": "v1-d12414d9da0968e8a49c5228235244fbf2f0ec6a7e3b15f69ded61d626e00e97",
-    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
+    "sourceHash": "v1-e06357216d236e1fbac0dc1e710988023bc721bb2fb05a2f6a2ccb698d6e8f50",
+    "sourceCommit": "d35e32c1ffe988e24d391dedb35666387fd2b3d6"
   }
 }
